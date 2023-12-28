@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/cjenovnik_unos">Unos u cjenovnik</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/form">Izvještaj o putnim nalozima</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/form2">Izvještaj o zaposlenicima</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/brisi">Brisanje zaposlenika</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/prikazZap">Prikaz zaposlenika</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/zaposlenik_unos">Unos zaposlenika</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>sifra_zaposlenika</th>
+        <th>ime_zaposlenika</th>
+        <th>prezime_zaposlenika</th>
+        <th>maticni_broj_zaposlenika</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% for(let i = 0; i < prikazZap.length; i++) { %>
+        <tr>
+            <td><%= prikazZap[i].sifra_zaposlenika %></td>
+            <td><%= prikazZap[i].ime_zaposlenika %></td>
+            <td><%= prikazZap[i].prezime_zaposlenika %></td>
+            <td><%= prikazZap[i].maticni_broj_zaposlenika %></td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+
+<script>
+
+</script>
+</body>
+</html>

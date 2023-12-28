@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/cjenovnik_unos">Unos u cjenovnik</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/form">Izvještaj o putnim nalozima</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/form2">Izvještaj o zaposlenicima</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/brisi">Brisanje zaposlenika</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/prikazZap">Prikaz zaposlenika</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/zaposlenik_unos">Unos zaposlenika</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+<h1><%= title %></h1>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>broj_putnog_naloga</th>
+        <th>datum_putnog_naloga</th>
+        <th>relacija</th>
+        <th>nacin_putovanja</th>
+        <th>svrha_putovanja</th>
+        <th>datum_i_vrijeme_pocetka</th>
+        <th>datum_i_vrijeme_kraja</th>
+        <th>sifra_zaposlenika</th>
+        <th>sifra_oj</th>
+        <th>sifra_vozila</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% for(let i = 0; i < prikaz.length; i++) { %>
+        <tr>
+            <td><%= prikaz[i].broj_putnog_naloga %></td>
+            <td><%= prikaz[i].datum_putnog_naloga %></td>
+            <td><%= prikaz[i].relacija %></td>
+            <td><%= prikaz[i].nacin_putovanja %></td>
+            <td><%= prikaz[i].svrha_putovanja %></td>
+            <td><%= prikaz[i].datum_i_vrijeme_pocetka %></td>
+            <td><%= prikaz[i].datum_i_vrijeme_kraja %></td>
+            <td><%= prikaz[i].sifra_zaposlenika %></td>
+            <td><%= prikaz[i].sifra_oj %></td>
+            <td><%= prikaz[i].sifra_vozila %></td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+
+<script>
+
+</script>
+</body>
+</html>
